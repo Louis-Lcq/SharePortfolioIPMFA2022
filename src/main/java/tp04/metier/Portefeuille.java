@@ -65,8 +65,12 @@ public class Portefeuille {
         if (this.mapLignes.containsKey(a) == true) {
             if (this.mapLignes.get(a).getQte() > q) {
                 this.mapLignes.get(a).setQte(this.mapLignes.get(a).getQte() - q);
-            } else if (this.mapLignes.get(a).getQte() == q) {
-                this.mapLignes.remove(a);
+            } 
+            else if (this.mapLignes.get(a).getQte() == q) {
+                this.mapLignes.remove(a);  
+            }
+            else{
+              System.out.println("on ne peut pas vendre plus que la quantité achetée");
             }
         }        
     }
