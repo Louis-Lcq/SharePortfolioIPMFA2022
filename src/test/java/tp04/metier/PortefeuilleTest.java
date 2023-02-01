@@ -32,16 +32,34 @@ public class PortefeuilleTest {
   
   public static void main (String[] args){
     
+    //Declaration de jour
+    Jour j1= new Jour(2023,20);
+    Jour j2= new Jour(2023,12);
+    
+    // Declaration d'action simple
     ActionSimple a1 = new ActionSimple("Apple");
     ActionSimple a2 = new ActionSimple("Microsoft");
     
+    //declaration de portefeuille
     Portefeuille p1 = new Portefeuille();
     
+    //Enregistrer un cours
+    a1.enrgCours(j2, 14.5f);
+    a2.enrgCours(j1, 18.5f);
+    a1.enrgCours(j1, 18.5f);
+    a2.enrgCours(j2, 14.5f);
+    
+    //achat d'action dans le portefeuille
     p1.acheter(a1, 5);
     p1.acheter(a2, 10);
     
+    
+    //Vente d'action dans le portefeuille
     p1.vendre(a1, 2);
     
-    System.out.println("La valeur du portefeuille est " + p1.valeur(1));
+    //Enregistrer un cours
+    System.out.println("La valeur de l'action simple "+ a1.getLibelle()+ " est de : " + a1.valeur(j1)+ " au jour :" + j1.getNoJour());
+    System.out.println("la valeur de l'action simple "+ a2.getLibelle()+ " est de : " + p1.valeur(j2) +" au jour :" + j2.getNoJour());
+            
   }
 }

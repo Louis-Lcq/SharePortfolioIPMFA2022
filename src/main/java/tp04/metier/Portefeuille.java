@@ -13,15 +13,15 @@ import java.util.Map;
  * @author perussel
  */
 public class Portefeuille {
-    
+    //Liste des action du portefeuille
     Map<Action, LignePortefeuille> mapLignes;
     
     private class LignePortefeuille {
-        
+        //Parametres de la classe LignePortefeuille
         private Action action;
         
         private int qte;
-        
+        // Methodes GET & SET 
         public int getQte() {
             return qte;
         }
@@ -33,21 +33,22 @@ public class Portefeuille {
         public Action getAction() {
             return this.action;
         }
-        
+        //Constructeur de la classe LignePortefeuille
         public LignePortefeuille(Action action, int qte) {
             this.action = action;
             this.qte = qte;
         }
-
+        //Methode toString() 
         public String toString() {
             return Integer.toString(qte);
         }
     }
-    
+    //Methode de la classe Portefeuille
     public Portefeuille() {
         this.mapLignes = new HashMap();
     }
     
+    //Methode d'achat d'une action
     public void acheter(Action a, int q) {
         if (this.mapLignes.containsKey(a) == false) {
             this.mapLignes.put(a, new LignePortefeuille(a, q));
@@ -66,11 +67,12 @@ public class Portefeuille {
             }
         }        
     }
-    
+    //Methode toString()
     public String toString() {
         return this.mapLignes.toString();
     }
-
+    
+    //Methode qui permet d'obtenir la valeur du portefeuille à un jour donnée
     public float valeur(Jour j) {
         float total = 0;
         for (LignePortefeuille lp : this.mapLignes.values()) {
