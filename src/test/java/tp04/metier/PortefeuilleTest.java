@@ -26,5 +26,12 @@ public class PortefeuilleTest {
 
       assertEquals(5, p1.valeur(j1));
     }
+    
+    @Test
+    public void AcheterShouldNotPass(){
+      a1.enrgCours(j1, 5f);
+      p1.acheter(a1, -10);
+      assertEquals(-50, p1.valeur(j1));      
+    }
 
   }

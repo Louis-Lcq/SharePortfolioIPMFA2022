@@ -50,8 +50,10 @@ public class Portefeuille {
     
     //Methode d'achat d'une action
     public void acheter(Action a, int q) {
-      
-        if (this.mapLignes.containsKey(a) == false) {
+        if (q <= 0){
+          System.out.println("on ne peut pas acheter de quantités négatives");
+        }
+        else if (this.mapLignes.containsKey(a) == false) {
             this.mapLignes.put(a, new LignePortefeuille(a, q));
         } else {
             this.mapLignes.get(a).setQte(this.mapLignes.get(a).getQte() + q);
