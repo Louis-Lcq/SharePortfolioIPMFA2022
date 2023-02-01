@@ -13,8 +13,9 @@ import java.util.Map;
  * @author perussel
  */
 public class ActionSimple extends Action {
+  
 
-  // attribut lien
+  // liste des actions pour un cours à un jour donné
   private Map<Jour, Cours> mapCours;
 
   // constructeur
@@ -22,7 +23,7 @@ public class ActionSimple extends Action {
     // Action simple initialisée comme 1 action
     super(libelle);
     // init spécifique
-    this.mapCours = new HashMap();
+    this.mapCours = new HashMap<>();
   }
 
   // enrg possible si pas de cours pour ce jour

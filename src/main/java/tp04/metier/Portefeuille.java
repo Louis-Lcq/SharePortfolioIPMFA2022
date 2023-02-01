@@ -50,6 +50,7 @@ public class Portefeuille {
     
     //Methode d'achat d'une action
     public void acheter(Action a, int q) {
+      
         if (this.mapLignes.containsKey(a) == false) {
             this.mapLignes.put(a, new LignePortefeuille(a, q));
         } else {

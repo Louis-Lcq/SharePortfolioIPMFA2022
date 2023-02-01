@@ -20,5 +20,23 @@ public class ActionSimpleTest {
     @org.junit.jupiter.api.Test
     public void testSomeMethod() {
     }
+    public static void main (String[] args){
     
+    //Declaration de jour
+    Jour j1= new Jour(2023,20);
+    Jour j2= new Jour(2023,12);
+    
+    // Declaration d'action simple
+    ActionSimple a1 = new ActionSimple("Apple");
+    ActionSimple a2 = new ActionSimple("Microsoft");
+    
+    //declaration de portefeuille
+    Portefeuille p1 = new Portefeuille();
+    
+    //Enregistrer un cours
+    a1.enrgCours(j2, 14.5f);
+    a2.enrgCours(j1, 18.5f);
+    a1.enrgCours(j1, 18.5f);
+    a2.enrgCours(j2, 14.5f);
+    }
 }
