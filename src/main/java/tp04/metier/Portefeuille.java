@@ -56,6 +56,7 @@ public class Portefeuille {
         }
     }
 
+    // méthode permettant de vendre une action
     public void vendre(Action a, int q) {
         if (this.mapLignes.containsKey(a) == true) {
             if (this.mapLignes.get(a).getQte() > q) {

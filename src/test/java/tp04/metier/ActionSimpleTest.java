@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ActionSimpleTest {
     
     public ActionSimpleTest() {
+      
     }
 
     @org.junit.jupiter.api.Test
