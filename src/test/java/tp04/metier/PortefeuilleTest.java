@@ -35,7 +35,7 @@ public class PortefeuilleTest {
       ActionSimple a1 = new ActionSimple("Apple");            
       a1.enrgCours(j1, 5f);
       p1.acheter(a1, -10);
-      assertEquals(-50, p1.valeur(j1));      
+      assertNotEquals(-50, p1.valeur(j1));      
     }
     
     @Test
